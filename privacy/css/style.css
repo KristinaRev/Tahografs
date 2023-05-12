@@ -18,35 +18,6 @@ body {
   position: relative;
   height: 100vh;
 }
-.wrapper__bg {
-  position: absolute;
-  width: 1580px;
-  height: 1580px;
-  left: 590px;
-  top: -403px;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(181, 223, 148, 0.8) 0%, rgba(181, 223, 148, 0) 100%);
-}
-
-@media (max-width: 768px) {
-  .wrapper__bg {
-    position: absolute;
-    width: 638px;
-    height: 487px;
-    left: 400px;
-    top: 27px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(181, 223, 148, 0.8) 0%, rgba(181, 223, 148, 0) 100%);
-  }
-}
-@media (max-width: 420px) {
-  .wrapper__bg {
-    position: absolute;
-    width: 430px;
-    height: 430px;
-    left: 96px;
-    top: 27px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(181, 223, 148, 0.8) 0%, rgba(181, 223, 148, 0) 100%);
-  }
-}
 
 .container__bg {
   position: absolute;
@@ -221,17 +192,12 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 110%;
+  font-size: 24px;
+  line-height: 30px;
   /* or 22px */
   display: flex;
   align-items: center;
   color: #292929;
-}
-@media (max-width: 420px) {
-  .footer__name p {
-    font-size: 22px;
-  }
 }
 .footer__contacts {
   display: flex;
@@ -257,12 +223,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 420px) {
-  .footer__contacts a {
-    font-size: 16px;
-    width: 300px;
-  }
 }
 @media (max-width: 420px) {
   .footer__contacts a:last-child {
@@ -300,25 +260,34 @@ body {
 .politics__btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   margin: 20px auto;
-  max-width: 750px;
-  width: 100%;
+  border: 2px solid #1FA464;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 16px 48px;
+  max-width: 236px;
+}
+@media (max-width: 520px) {
+  .politics__btn {
+    max-width: 100%;
+  }
 }
 .politics__btn a {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 32px;
   display: flex;
   align-items: center;
   text-align: center;
-  color: #242424;
+  color: #1FA464;
 }
 .politics__text {
   position: relative;
-  max-width: 750px;
+  max-width: 1320px;
   width: 100%;
   margin: 0 auto;
 }
@@ -352,7 +321,7 @@ body {
   /* or 58px */
   text-align: center;
   /* Black */
-  color: #323333;
+  color: #292929;
 }
 @media (max-width: 520px) {
   .politics__window h1 {
@@ -366,8 +335,8 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
+  font-size: 20px;
+  line-height: 25px;
   overflow-y: scroll;
 }
 .politics__window .politics-privacy__text span a {
