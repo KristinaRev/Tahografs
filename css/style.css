@@ -102,8 +102,8 @@ h2 {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400 !important;
-  font-size: 20px !important;
-  line-height: 110% !important;
+  font-size: 24px !important;
+  line-height: 30px !important;
 }
 .list li {
   position: relative;
@@ -507,6 +507,7 @@ h2 {
 .replacement__img {
   max-width: 250px;
   position: relative;
+  margin: 0 20px;
 }
 @media (max-width: 768px) {
   .replacement__img {
@@ -526,7 +527,7 @@ h2 {
   position: absolute;
   z-index: 9;
   top: 20px;
-  left: 0;
+  right: 20px;
   width: 100%;
 }
 
@@ -542,9 +543,7 @@ h2 {
 }
 .replacement__img-sm {
   display: none;
-  width: 53%;
-  margin: 0 auto;
-  margin-bottom: 24px;
+  margin: 0 0 24px 0;
 }
 @media (max-width: 768px) {
   .replacement__img-sm {
@@ -554,7 +553,10 @@ h2 {
   }
 }
 .replacement__img-one {
-  max-height: 226px;
+  max-height: 224px;
+}
+.replacement__img-one:last-child {
+  margin-left: 4vw;
 }
 .replacement__img-sm_rebro-vector {
   position: relative;
@@ -575,7 +577,7 @@ h2 {
   }
 }
 .replacement__text {
-  max-width: 410px;
+  max-width: 473px;
   width: 100%;
 }
 .replacement__text p {
@@ -583,23 +585,23 @@ h2 {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
+  font-size: 20px;
+  line-height: 25px;
   /* or 22px */
   display: flex;
   align-items: center;
   color: #292929;
 }
 .replacement__list {
-  max-width: 410px;
+  max-width: 473px;
   width: 100%;
 }
 .replacement__list p {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 110%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
   /* or 22px */
   display: flex;
   align-items: center;
