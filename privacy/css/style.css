@@ -3,17 +3,6 @@
 body {
   height: 100vh;
 }
-
-@media (max-width: 768px) {
-  .atoll__bg {
-    position: absolute;
-    width: 430px;
-    height: 430px;
-    left: 98px;
-    top: 1500px;
-    background: radial-gradient(50% 50% at 50% 50%, #B5DF94 0%, rgba(181, 223, 148, 0) 100%);
-  }
-}
 .container__pol {
   position: relative;
   height: 100vh;
@@ -73,11 +62,13 @@ body {
 @media (max-width: 768px) {
   .header {
     padding: 0 30px;
+    flex-direction: column;
+    align-items: start;
   }
 }
 @media (max-width: 420px) {
   .header {
-    padding: 0 10px;
+    padding: 25px 12px;
   }
 }
 @media (max-width: 768px) {
@@ -93,6 +84,14 @@ body {
 .header__contacts {
   display: flex;
   align-items: center;
+  width: 410px;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .header__contacts {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .header__contacts a {
   font-family: "Source Sans Pro", sans-serif;
@@ -103,25 +102,14 @@ body {
   text-align: center;
   font-feature-settings: "liga" off;
   color: #292929;
-  width: 246px;
-  height: 60px;
+  height: 30px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
+
 @media (max-width: 768px) {
-  .header__contacts a {
-    width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .header__contacts a:last-child {
-    display: none;
-  }
-}
-@media (max-width: 420px) {
-  .header__contacts a {
-    font-size: 16px;
+  .header__contacts a:first-child {
+    margin-top: 16px;
   }
 }
 
