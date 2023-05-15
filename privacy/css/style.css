@@ -154,14 +154,19 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
+  font-size: 20px;
+  line-height: 25px;
   display: flex;
   align-items: center;
   color: #292929;
 }
+@media (max-width: 768px) {
+  .footer__row:last-child p {
+    margin: 4px 0 16px 0;
+  }
+}
 .footer__row:last-child p:last-child a {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -182,14 +187,22 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  /* or 22px */
   display: flex;
   align-items: center;
   color: #292929;
 }
+@media (max-width: 420px) {
+  .footer__name p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .footer__name p {
+    margin-bottom: 16px;
+  }
+}
 .footer__contacts {
   display: flex;
-  align-items: center;
 }
 @media (max-width: 768px) {
   .footer__contacts {
@@ -206,15 +219,20 @@ body {
   text-align: center;
   font-feature-settings: "liga" off;
   color: #292929;
-  width: 246px;
-  height: 60px;
   display: flex;
+  height: 34px;
   justify-content: center;
   align-items: center;
 }
+.footer__contacts a:first-child {
+  margin-right: 40px;
+}
 @media (max-width: 420px) {
-  .footer__contacts a:last-child {
-    display: none;
+  .footer__contacts {
+    flex-direction: column;
+  }
+  .footer__contacts a {
+    justify-content: flex-start;
   }
 }
 

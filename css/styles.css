@@ -244,7 +244,7 @@ h2 {
 }
 @media (max-width: 768px) {
   .banner__bg {
-    left: 0px;
+    left: 0;
     top: 210px;
   }
 }
@@ -329,7 +329,7 @@ h2 {
 .atoll__hover {
   position: absolute;
   top: 0;
-  left: 0px;
+  left: 0;
   height: 100%;
   align-items: center;
   display: flex;
@@ -507,7 +507,7 @@ h2 {
 .replacement__img {
   max-width: 250px;
   position: relative;
-  margin: 0 20px;
+  margin: 0 20px 0 40px;
 }
 @media (max-width: 768px) {
   .replacement__img {
@@ -580,6 +580,11 @@ h2 {
   max-width: 473px;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .replacement__text {
+    max-width: 100%;
+  }
+}
 .replacement__text p {
   padding-bottom: 25px;
   font-family: "Source Sans Pro", sans-serif;
@@ -595,6 +600,11 @@ h2 {
 .replacement__list {
   max-width: 473px;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .replacement__list {
+    max-width: 100%;
+  }
 }
 .replacement__list p {
   font-family: "Source Sans Pro", sans-serif;
@@ -613,20 +623,9 @@ h2 {
   padding: 60px 0;
   z-index: 20;
 }
-.contacts ul li{
-  font-family: "Source Sans Pro", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  /* text */
-  color: #292929;
-}
 
 .contacts__info-list {
-  margin-bottom: 126px;
+  margin-bottom: 56px;
 }
 @media (max-width: 768px) {
   .contacts {
@@ -637,12 +636,17 @@ h2 {
   max-width: 808px;
   width: 100%;
 }
+@media (max-width: 400px) {
+  .contacts__map {
+    max-height: 250px;
+    overflow: hidden;
+  }
+}
 .contacts__map iframe {
   width: 100%;
 }
 .contacts__content {
   display: flex;
-  align-items: top;
   justify-content: space-between;
   padding: 60px 0;
 }
@@ -653,51 +657,52 @@ h2 {
   }
 }
 .contacts__info {
-  max-width: 428px;
+  max-width: 455px;
   width: 100%;
+  margin-left: 48px;
 }
-
-.contacts ul li {
-  font-family: "Source Sans Pro", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 110%;
-  /* or 22px */
-  display: flex;
-  align-items: center;
-  color: #292929;
-  padding-bottom: 37px;
-}
-
-
 @media (max-width: 768px) {
   .contacts__info {
-    padding: 0px;
+    margin-left: 0;
   }
-
-  .contacts ul li {
-    font-family: "Source Sans Pro", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 110%;
-    /* or 22px */
-    display: flex;
-    align-items: center;
-    color: #292929;
-    padding-top: 25px;
-    padding-bottom: 0;
-    }
-
-    .contacts__info-list {
-      margin-bottom: 45px;
-    }
 }
-
+.contacts ul li {
+   font-family: "Source Sans Pro", sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 30px;
+   display: flex;
+   flex-direction: column;
+   justify-content: left;
+   align-items: start;
+   color: #292929;
+   padding-bottom: 37px;
+ }
+.contacts ul li p:first-child {
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .contacts__info {
+    padding: 0;
+  }
+  .contacts ul {
+    margin: 24px 0 0 0;
+  }
+  .contacts ul li {
+    padding-bottom: 20px;
+  }
+  .contacts__info-list {
+    margin-bottom: 45px;
+  }
+  .contacts__info button {
+    width: 93vw;
+  }
+}
 .contacts ul li a {
   color: #292929;
 }
+
 
 .footer {
   z-index: 10;
@@ -739,14 +744,19 @@ h2 {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
+  font-size: 20px;
+  line-height: 25px;
   display: flex;
   align-items: center;
   color: #292929;
 }
+@media (max-width: 768px) {
+  .footer__row:last-child p {
+    margin: 4px 0 16px 0;
+  }
+}
 .footer__row:last-child p:last-child a {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -765,9 +775,8 @@ h2 {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 110%;
-  /* or 22px */
+  font-size: 24px;
+  line-height: 30px;
   display: flex;
   align-items: center;
   color: #292929;
@@ -775,6 +784,11 @@ h2 {
 @media (max-width: 420px) {
   .footer__name p {
     font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .footer__name p {
+    margin-bottom: 16px;
   }
 }
 .footer__contacts {
@@ -796,22 +810,20 @@ h2 {
   text-align: center;
   font-feature-settings: "liga" off;
   color: #292929;
-  width: 246px;
-  height: 60px;
   display: flex;
+  height: 34px;
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 420px) {
-  .footer__contacts a {
-    font-size: 16px;
-    width: 300px;
-    justify-content: flex-start;
-  }
+.footer__contacts a:first-child {
+  margin-right: 40px;
 }
 @media (max-width: 420px) {
-  .footer__contacts a:last-child {
-    display: none;
+  .footer__contacts {
+    flex-direction: column;
+  }
+  .footer__contacts a {
+    justify-content: flex-start;
   }
 }
 
@@ -886,7 +898,7 @@ h2 {
   font-size: 46px;
   line-height: 1;
   top: -9px;
-  left: 0px;
+  left: 0;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
 }
 .form__cross:after {
@@ -925,7 +937,7 @@ h2 {
   }
 }
 .form p {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -935,7 +947,7 @@ h2 {
   color: #292929;
 }
 .form p a {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
