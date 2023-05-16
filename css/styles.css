@@ -1299,7 +1299,7 @@ h2 {
   -moz-opacity: 1; /* Firefox and Mozilla browsers */
   -webkit-opacity: 1; /* WebKit browser e.g. Safari */
   -webkit-filter: opacity(1); /* For IE8 and earlier */
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .animation-banner {
