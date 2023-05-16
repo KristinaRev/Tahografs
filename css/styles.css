@@ -507,7 +507,8 @@ h2 {
 .atoll__img-sm {
   display: none;
   max-width: 603px;
-  width: 90%;
+  width: 100%;
+  height: auto;
   padding-bottom: 40px;
   position: relative;
 }
@@ -521,13 +522,6 @@ h2 {
   .atoll__img-sm {
     display: block;
   }
-}
-.atoll__img-vector-sm {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 9;
-  width: 100%;
 }
 
 .replacement {

@@ -14,7 +14,7 @@ phoneInput.addEventListener('input', function() {
         errorLabel.textContent = 'Введите 10 цифр';
         setTimeout(function() {
             errorLabel.textContent = '';
-        }, 3000); // Удаление сообщения об ошибке через 2 секунды
+        }, 1500); // Удаление сообщения об ошибке через 2 секунды
     } else {
         errorLabel.textContent = '';
     }
