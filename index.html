@@ -158,11 +158,13 @@
                             <h2>Запросить звонок</h2>
                             <p>Оставьте заявку на бесплатную консультацию специалиста </p>
                             <form onsubmit="sendForm(); return false;" method="post" class="form__call">
-                                <input type="text" name="name" class="_req _username" placeholder="Ваше имя" name="inputName">
-                                <input type="text" name="phone" class="_req _phone" placeholder="+7" name="inputPhone">
+                                <input type="text" name="name" class="_req _username" placeholder="Ваше имя" name="inputName" id="inputUsername">
+                                <div id="errorLabelUsername" class="form-error-label"></div>
+                                <input type="text" name="phone" class="_req _phone" placeholder="+7" name="inputPhone" id="inputPhone">
+                                <div id="errorLabelPhone" class="form-error-label"></div>
                                 <button type="submit" class="form__open">Оставить заявку</button>
                             </form>
-                            <p>Продолжая, вы принимаете нашу</p>
+                            <span class="form_politics__title">Продолжая, вы принимаете нашу</span>
                             <p class="politics__privacy"><a href="https://tacho.sotrans.ru/privacy">Политику конфиденциальности</a></p>
                             <div class="form__bg"></div>
                         </div>

@@ -3,6 +3,22 @@ var closeSucc = document.querySelector('.form__close')
 var closeForm = document.querySelectorAll('.form__cross')
 var formModal = document.querySelector('.form')
 var formWrap = document.querySelector('.form__wrap')
+const phoneInput = document.getElementById('inputPhone');
+const errorLabel = document.getElementById('errorLabelPhone');
+
+phoneInput.addEventListener('input', function() {
+    const phoneNumber = phoneInput.value;
+    const phonePattern = /^\d{10}$/; // Проверяем формат: ровно 10 цифр
+
+    if (!phonePattern.test(phoneNumber)) {
+        errorLabel.textContent = 'Введите 10 цифр';
+        setTimeout(function() {
+            errorLabel.textContent = '';
+        }, 3000); // Удаление сообщения об ошибке через 2 секунды
+    } else {
+        errorLabel.textContent = '';
+    }
+});
 openForm.forEach(item => {
     item.addEventListener('click', function () {
         formModal.style.opacity = '1'
