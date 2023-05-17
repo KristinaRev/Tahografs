@@ -689,9 +689,15 @@ h2 {
 .contacts__info-list {
   margin-bottom: 56px;
 }
+.contacts__info-list li:first-child {
+  margin-bottom: 56px;
+}
 @media (max-width: 768px) {
   .contacts {
     padding: 56px 0 30px 0;
+  }
+  .contacts__info-list li:first-child {
+    margin-bottom: 0;
   }
 }
 .contacts__map {
