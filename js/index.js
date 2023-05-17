@@ -4,7 +4,43 @@ const closeForm = document.querySelectorAll('.form__cross')
 const formModal = document.querySelector('.form')
 const formWrap = document.querySelector('.form__wrap')
 const phoneInput = document.getElementById('inputPhone');
+const nameInput = document.getElementById('inputUsername')
 const errorLabel = document.getElementById('errorLabelPhone');
+
+function changeStyles(inputId) {
+    const input = document.getElementById(inputId);
+
+    if (input.value.length > 0) {
+        input.classList.add("form__input-type");
+        input.classList.remove("form__input-focus");
+        input.classList.remove("form__input");
+        input.classList.remove("form__input-error");
+    } else if (input.classList.contains("form__input-error")) {
+        input.classList.remove("form__input-focus");
+        input.classList.remove("form__input");
+        input.classList.remove("form__input-type");
+    } else if (input === document.activeElement) {
+        input.classList.add("form__input-focus");
+        input.classList.remove("form__input");
+        input.classList.remove("form__input-type");
+        input.classList.remove("form__input-error");
+    } else {
+        input.classList.add("form__input");
+        input.classList.remove("form__input-focus");
+        input.classList.remove("form__input-type");
+        input.classList.remove("form__input-error");
+    }
+}
+
+function validateInput(inputId) {
+    const input = document.getElementById(inputId);
+
+    if (input.value.length === 0) {
+        input.classList.add("form__input-error");
+    } else {
+        input.classList.remove("form__input-error");
+    }
+}
 
 phoneInput.addEventListener('input', function() {
     const phoneNumber = phoneInput.value;
@@ -180,6 +216,7 @@ function usernameTest(input) {
 
 
 function sendForm() {
+
 	let datastring = $(".form__call").serialize();
 	$.ajax({
 		type: "POST",

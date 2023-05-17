@@ -156,10 +156,10 @@
                             <div class="form__cross"></div>
                             <h2>Запросить звонок</h2>
                             <p>Оставьте заявку на бесплатную консультацию специалиста </p>
-                            <form onsubmit="sendForm(); return false;" method="post" class="form__call">
-                                <input type="text" name="name" class="_req _username" placeholder="Ваше имя" name="inputName" id="inputUsername">
+                            <form onsubmit="sendForm(); return false;" method="post" class="form__call" id="form-call">
+                                <input type="text" class="_req _username form__input" placeholder="Ваше имя" name="inputName" id="inputUsername" oninput="validateInput('inputUsername')" onkeydown="changeStyles('inputUsername')" onfocus="changeStyles('inputUsername')" onblur="changeStyles('inputUsername')">
                                 <div id="errorLabelUsername" class="form-error-label"></div>
-                                <input type="text" name="phone" class="_req _phone" placeholder="+7" name="inputPhone" id="inputPhone">
+                                <input type="text" class="_req _phone form__input" placeholder="+7" name="inputPhone" id="inputPhone" oninput="validateInput('inputPhone')" onkeydown="changeStyles('inputPhone')" onfocus="changeStyles('inputPhone')" onblur="changeStyles('inputPhone')">
                                 <div id="errorLabelPhone" class="form-error-label"></div>
                                 <button type="submit" class="form__open">Оставить заявку</button>
                             </form>
