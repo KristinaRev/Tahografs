@@ -30,6 +30,7 @@ function changeStyles(inputId) {
     }
 }
 
+
 function validateInput(inputId) {
     const input = document.getElementById(inputId);
 
@@ -38,6 +39,13 @@ function validateInput(inputId) {
     } else {
         input.classList.remove("form__input-error");
     }
+}
+
+function applyFocusStyles(input) {
+    input.classList.add("form__input-focus");
+    input.classList.remove("form__input-error");
+    input.classList.remove("form__input");
+    input.classList.remove("form__input-type");
 }
 
 
