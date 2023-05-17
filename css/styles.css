@@ -287,7 +287,7 @@ h2 {
 }
 @media (max-width: 1024px) {
   .banner__bg {
-    left: 0px;
+    left: 0;
     top: 360px;
   }
 }
@@ -1179,9 +1179,9 @@ h2 {
   background: none;
   font-family: "Noah Text", sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 150%;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 32px;
   color: #1FA464;
   flex: none;
   order: 0;
