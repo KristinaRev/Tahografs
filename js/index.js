@@ -6,7 +6,10 @@ const formWrap = document.querySelector('.form__wrap')
 const phoneInput = document.getElementById('inputPhone');
 const nameInput = document.getElementById('inputUsername')
 const errorLabel = document.getElementById('errorLabelPhone');
-
+const form = document.querySelector('.form__call')
+const formBlock = document.querySelector('.form__request')
+const formSucc = document.querySelector('.form__answer')
+let flagForm = true;
 function changeStyles(inputId) {
     const input = document.getElementById(inputId);
 
@@ -42,6 +45,7 @@ function validateInput(inputId) {
     }
 }
 
+
 phoneInput.addEventListener('input', function() {
     const phoneNumber = phoneInput.value;
     const phonePattern = /^\d{10}$/; // Проверяем формат: ровно 10 цифр
@@ -59,18 +63,18 @@ openForm.forEach(item => {
     item.addEventListener('click', function () {
         formModal.style.opacity = '1'
         formModal.style.display = 'flex'
-
+        formBlock.style.display = 'block'
+        formSucc.style.display = 'none'
     })
 })
 closeForm.forEach(item => {
     item.addEventListener('click', function () {
         formModal.style.opacity = '0'
         formModal.style.display = 'none'
-
     })
 })
 closeSucc.addEventListener('click', function () {
-    formModal.style.opacity = '0'
+    formModal.style.opacity = '1'
     formModal.style.display = 'none'
 })
 
@@ -90,7 +94,7 @@ if(animItems.length > 0) {
 
     function animOnScroll() {
 
-        for (var i = 0; i < animItems.length; i++) {
+        for (let i = 0; i < animItems.length; i++) {
             const animItem = animItems[i]
             const animItemH = animItem.offsetHeight
             const animItemOffset = offset(animItem).top
@@ -122,13 +126,11 @@ if(animItems.length > 0) {
 }
 
 // Form Validate
-const form = document.querySelector('.form__call')
 
-const formBlock = document.querySelector('.form__request')
-const formSucc = document.querySelector('.form__answer')
 form.addEventListener('submit', function (event) {
     event.preventDefault()
-    var error = formValidate(form)
+    let error = formValidate(form)
+
 })
 
 function formValidate(form) {
@@ -164,6 +166,7 @@ function formValidate(form) {
         formBlock.style.display = 'none'
         formSucc.style.display = 'block'
     }
+    form.reset();
 }
 function formAddError(input) {
     input.parentElement.classList.add('_error')

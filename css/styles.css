@@ -976,7 +976,7 @@ h2 {
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  background: #E4E4E4;
+  background: #B0B0B0;
   z-index: 1;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
   transform: scale(0.01);
@@ -986,7 +986,7 @@ h2 {
 }
 .form__cross:hover:before {
   transform: scale(0.8) rotate(45deg);
-  color: #fff;
+  color: #B0B0B0;
 }
 .form h2 {
   font-family: "Noah Text", sans-serif;
@@ -1060,6 +1060,8 @@ h2 {
   font-size: 20px;
   line-height: 25px;
   color: #B0B0B0;
+  background-color: #FFFFFF;
+  outline: none;
 }
 .form__input-focus {
   max-width: 341px;
@@ -1075,6 +1077,8 @@ h2 {
   font-size: 20px;
   line-height: 25px;
   color: #242424;
+  background-color: #FFFFFF;
+  outline: none;
 }
 .form__input-type {
   color: #242424;
@@ -1090,6 +1094,8 @@ h2 {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
+  background-color: #FFFFFF;
+  outline: none;
 }
 .form__input-error {
   color: #F1253B;
@@ -1105,6 +1111,8 @@ h2 {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
+  background-color: #FFFFFF;
+  outline: none;
 }
 .form__request form input:focus::placeholder{
   color: #242424;
@@ -1506,3 +1514,5 @@ h2 {
   -webkit-filter: opacity(1); /* For IE8 and earlier */
   transition: all 0.8s ease 0.2s;
 }
+
+
