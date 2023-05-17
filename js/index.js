@@ -1,8 +1,8 @@
-var openForm = document.querySelectorAll('.call')
-var closeSucc = document.querySelector('.form__close')
-var closeForm = document.querySelectorAll('.form__cross')
-var formModal = document.querySelector('.form')
-var formWrap = document.querySelector('.form__wrap')
+const openForm = document.querySelectorAll('.call')
+const closeSucc = document.querySelector('.form__close')
+const closeForm = document.querySelectorAll('.form__cross')
+const formModal = document.querySelector('.form')
+const formWrap = document.querySelector('.form__wrap')
 const phoneInput = document.getElementById('inputPhone');
 const errorLabel = document.getElementById('errorLabelPhone');
 
@@ -47,7 +47,7 @@ document.addEventListener('click', (e) => {
 
 // Animation
 
-var animItems = document.querySelectorAll('._anim-items')
+const animItems = document.querySelectorAll('._anim-items')
 if(animItems.length > 0) {
 
     window.addEventListener('scroll', animOnScroll)
@@ -60,7 +60,7 @@ if(animItems.length > 0) {
             const animItemOffset = offset(animItem).top
             const animStart = 3
 
-            var animItemPoint = window.innerHeight - animItemH / animStart
+            let animItemPoint = window.innerHeight - animItemH / animStart
             if (animItemH > window.innerHeight) {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart
             }
@@ -86,19 +86,19 @@ if(animItems.length > 0) {
 }
 
 // Form Validate
-var form = document.querySelector('.form__call')
+const form = document.querySelector('.form__call')
 
-var formBlock = document.querySelector('.form__request')
-var formSucc = document.querySelector('.form__answer')
+const formBlock = document.querySelector('.form__request')
+const formSucc = document.querySelector('.form__answer')
 form.addEventListener('submit', function (event) {
     event.preventDefault()
     var error = formValidate(form)
 })
 
 function formValidate(form) {
-    var error = 0
-    var formReq = document.querySelectorAll('._req')
-    for (var index = 0; index < formReq.length; index++) {
+    let error = 0
+    const formReq = document.querySelectorAll('._req')
+    for (let index = 0; index < formReq.length; index++) {
         const input = formReq[index]
         formRemoveError(input)
         if (input.classList.contains('_username')) {
@@ -145,12 +145,12 @@ function usernameTest(input) {
 }
 
 [].forEach.call( document.querySelectorAll('._phone'), function(input) {
-    var keyCode;
+    let keyCode;
     function mask(event) {
         event.keyCode && (keyCode = event.keyCode);
-        var pos = this.selectionStart;
+        let pos = this.selectionStart;
         if (pos < 3) event.preventDefault();
-        var matrix = "+7 (___)-___-____",
+        let matrix = "+7 (___)-___-____",
             i = 0,
             def = matrix.replace(/\D/g, ""),
             val = this.value.replace(/\D/g, ""),
@@ -162,7 +162,7 @@ function usernameTest(input) {
             i < 5 && (i = 3);
             new_value = new_value.slice(0, i)
         }
-        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+        let reg = matrix.substr(0, this.value.length).replace(/_+/g,
             function(a) {
                 return "\\d{1," + a.length + "}"
             }).replace(/[+()]/g, "\\$&");
@@ -180,7 +180,7 @@ function usernameTest(input) {
 
 
 function sendForm() {
-	var datastring = $(".form__call").serialize();
+	let datastring = $(".form__call").serialize();
 	$.ajax({
 		type: "POST",
 		url: "send.php",
