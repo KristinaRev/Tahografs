@@ -610,9 +610,13 @@ h2 {
   justify-content: space-between;
   padding: 54px 0 0 0;
 }
+@media (max-width: 768px) {
+  .replacement__content {
+    padding: 36px 0 0 0;
+  }
+}
 @media (max-width: 960px) {
   .replacement__content {
-    padding: 40px 0 0 0;
     flex-direction: column;
   }
 }
@@ -710,7 +714,7 @@ h2 {
 @media (max-width: 768px) {
   .contacts__content {
     flex-direction: column;
-    padding: 20px 0 26px 0;
+    padding: 36px 0 26px 0;
   }
 }
 .contacts__info {
