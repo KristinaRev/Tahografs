@@ -21,13 +21,7 @@ input:valid,textarea:valid{outline: none;}
 /* Для полей ввода */
 input:-webkit-autofill,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:hover,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:focus,
-textarea:-webkit-autofill:hover,
-select:-webkit-autofill,
-select:-webkit-autofill:focus,
-select:-webkit-autofill:hover {
+input:-webkit-autofill:hover {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
     -webkit-text-fill-color: #000 !important;
 }

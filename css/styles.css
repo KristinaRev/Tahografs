@@ -402,6 +402,7 @@ h2 {
   .atoll__content {
     flex-direction: column;
     padding: 36px 0 0 0;
+    align-items: start;
   }
 }
 .atoll__content p {
@@ -432,9 +433,9 @@ h2 {
   left: 33px;
 
 }
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .atoll__img {
-    left: 0;
+    display: none;
   }
 }
 .atoll__img:hover .atoll__unhover {
@@ -510,7 +511,7 @@ h2 {
   position: relative;
 }
 .atoll__img-sm-img {
-  width: 100%;
+  width: 92vw;
   object-fit: contain;
   position: relative;
   z-index: 11;
@@ -520,6 +521,17 @@ h2 {
     display: block;
   }
 }
+@media (max-width: 620px) {
+  .atoll__img-sm-img {
+    width: 90vw;
+  }
+}
+@media (max-width: 500px) {
+  .atoll__img-sm-img {
+    width: 100%;
+  }
+}
+
 
 .replacement {
   padding: 124px 0 0 0;
