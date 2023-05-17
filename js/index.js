@@ -13,24 +13,19 @@ let flagForm = true;
 function changeStyles(inputId) {
     const input = document.getElementById(inputId);
 
-    if (input.value.length > 0) {
-        input.classList.add("form__input-type");
-        input.classList.remove("form__input-focus");
+    if (input.value.length > 0 && input === document.activeElement) {
+        input.classList.remove("form__input-type");
         input.classList.remove("form__input");
         input.classList.remove("form__input-error");
+        input.classList.add("form__input-focus");
     } else if (input.classList.contains("form__input-error")) {
         input.classList.remove("form__input-focus");
         input.classList.remove("form__input");
         input.classList.remove("form__input-type");
-    } else if (input === document.activeElement) {
-        input.classList.add("form__input-focus");
+    }  else {
+        input.classList.add("form__input-type");
         input.classList.remove("form__input");
-        input.classList.remove("form__input-type");
-        input.classList.remove("form__input-error");
-    } else {
-        input.classList.add("form__input");
         input.classList.remove("form__input-focus");
-        input.classList.remove("form__input-type");
         input.classList.remove("form__input-error");
     }
 }
@@ -165,8 +160,8 @@ function formValidate(form) {
     if(error == 0) {
         formBlock.style.display = 'none'
         formSucc.style.display = 'block'
+        form.reset();
     }
-    form.reset();
 }
 function formAddError(input) {
     input.parentElement.classList.add('_error')
