@@ -13,20 +13,22 @@ let flagForm = true;
 function changeStyles(inputId) {
     const input = document.getElementById(inputId);
 
-    if (input.value.length > 0 && input === document.activeElement) {
+    if (input.classList.contains("form__input-error")) {
+        input.classList.remove("form__input-focus");
+        input.classList.remove("form__input");
+        input.classList.remove("form__input-type");
+    } else if (input.value.length > 0 || input == document.activeElement) {
         input.classList.remove("form__input-type");
         input.classList.remove("form__input");
         input.classList.remove("form__input-error");
         input.classList.add("form__input-focus");
-    } else if (input.classList.contains("form__input-error")) {
-        input.classList.remove("form__input-focus");
-        input.classList.remove("form__input");
-        input.classList.remove("form__input-type");
+        input.classList.remove("_error ");
     }  else {
         input.classList.add("form__input-type");
         input.classList.remove("form__input");
         input.classList.remove("form__input-focus");
         input.classList.remove("form__input-error");
+        input.classList.remove("_error ");
     }
 }
 
@@ -46,6 +48,7 @@ function applyFocusStyles(input) {
     input.classList.remove("form__input-error");
     input.classList.remove("form__input");
     input.classList.remove("form__input-type");
+    input.classList.remove("_error");
 }
 
 
@@ -172,13 +175,11 @@ function formValidate(form) {
     }
 }
 function formAddError(input) {
-    input.parentElement.classList.add('_error')
-    input.classList.add('_error')
+    input.classList.add('form__input-error')
 }
 
 function formRemoveError(input) {
-    input.parentElement.classList.remove('_error')
-    input.classList.remove('_error')
+    input.classList.remove('form__input-error')
 }
 
 // Функция теста username
